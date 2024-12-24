@@ -33,6 +33,8 @@ export async function preparePipelineResults(inputs: Inputs): Promise<void> {
     auth: inputs.token,
   });
 
+  core.info('preparePipelineResults : 1');
+
   // When the action is preparePolicyResults, need to make sure token,
   // check_run_id and source_repository are provided
   if (!vaildateScanResultsActionInput(inputs)) {
